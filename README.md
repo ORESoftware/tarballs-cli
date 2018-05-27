@@ -8,12 +8,15 @@
 # clone a git repo, to which you will push files (tarballs, etc).
 $ trbl init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
 
+# what the above does is clone the git repo to: "$HOME/.trbl/repos/oresoftware/tarballs"
+# "oresoftware/tarballs" becomes the local id 
+
 
 # set the given location as the repo to push files to
 $ trbl use oresoftware/tarballs
 
 
-# add a file and push it to the remote repo
+# add a local file and push it to the remote repo
 $ trbl add foo.tgz "tgz/foo.latest.tgz"
 
 ```
