@@ -12,7 +12,7 @@ elif [ "$cmd" == "init" ]; then
 
   trbl_init "$@"
 
-elif [ "$cmd" == "removeall" ]; then
+elif [ "$cmd" == "remove-all" ]; then
 
   trbl_remove_all "$@"
 

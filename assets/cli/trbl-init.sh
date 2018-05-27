@@ -21,5 +21,6 @@ fi
 (
   cd "$HOME/.trbl/repos"
   ( git clone "$repo" "$name" > /dev/null)
+  trbl use "$name";
   echo "$PWD/$name";
 )
