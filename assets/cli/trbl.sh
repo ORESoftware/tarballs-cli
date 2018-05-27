@@ -24,6 +24,14 @@ elif [ "$cmd" == "use" ]; then
 
   trbl_use "$@"
 
+elif [ "$cmd" == "get" ]; then
+
+  trbl_get "$@"
+
+elif [ "$cmd" == "view" ]; then
+
+  trbl_view "$@"
+
 else
 
   echo "no subcommand was recognized."
