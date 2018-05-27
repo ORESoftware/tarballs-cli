@@ -1,10 +1,16 @@
 {
-  "name": "typescript-library-skeleton",
+  "name": "tarballs-cli",
   "version": "0.0.101",
   "description": "Semver-oriented TypeScript library skeleton.",
   "main": "dist/index.js",
   "bin": {
-    "TODO-typescript-library-skeleton": "dist/cli.js"
+    "trbl": "assets/cli/trbl.sh",
+    "trbl_add": "assets/cli/trbl-add.sh",
+    "trbl_init": "assets/cli/trbl-init.sh",
+    "trbl_remove": "assets/cli/trbl-remove.sh",
+    "trbl_remove_all": "assets/cli/trbl-remove-all.sh",
+    "trbl_open": "assets/cli/trbl-open.sh",
+    "trbl_use": "assets/cli/trbl-use.sh"
   },
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
@@ -14,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ORESoftware/typescript-library-skeleton.git"
+    "url": "git+https://github.com/ORESoftware/tarballs-cli.git"
   },
   "keywords": [
     "typescript",
@@ -25,9 +31,9 @@
   "author": "TODO Yo.Mama",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/ORESoftware/typescript-library-skeleton/issues"
+    "url": "https://github.com/ORESoftware/tarballs-cli/issues"
   },
-  "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
+  "homepage": "https://github.com/ORESoftware/tarballs-cli#readme",
   "dependencies": {},
   "devDependencies": {
     "@types/core-js": "^0.9.46",
