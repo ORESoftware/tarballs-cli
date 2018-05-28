@@ -3,22 +3,22 @@
 
 #### commands:
 
-<sub> <b> => clone a git repo, to which you will push files (tarballs, etc). </b> </sub>
+<sub> <b> <i> => clone a git repo, to which you will push files (tarballs, etc). </i> </b> </sub>
 
 ```bash
 $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
 ```
-<sup> the init command clones the git repo to: "$HOME/.trbl/repos/oresoftware/tarballs"</sup>
-<sup> and "oresoftware/tarballs" becomes the id for that repo </sup>
+<sup> <b> <i> the init command clones the git repo to: "$HOME/.trbl/repos/oresoftware/tarballs" </i> </b> </sup><br>
+<sup> <b> <i> and "oresoftware/tarballs" becomes the id for that repo </i> </b> </sup>
 
 
-<sub> => set the given location as the repo to push files to </sub>
+<sub> <b> <i> => set the given location as the repo to push files to </i> </b> </sub>
 
 ```bash
 $ tarzan use oresoftware/tarballs
 ```
 
-<sub> => add a local file and push it to the remote repo </sub>
+<sub> <b> <i> => add a local file and push it to the remote repo </i> </b> </sub>
 
 ```bash
 $ tarzan add foo.tgz "tarballs/foo.tgz"
