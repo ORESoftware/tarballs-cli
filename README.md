@@ -3,22 +3,24 @@
 
 #### commands:
 
+<sup>clone a git repo, to which you will push files (tarballs, etc).</sup>
+
 ```bash
-
-# <sup>clone a git repo, to which you will push files (tarballs, etc).</sup>
-$ trbl init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
-
-# <sub>what the above does is clone the git repo to: "$HOME/.trbl/repos/oresoftware/tarballs"</sub>
-# <sub>"oresoftware/tarballs" becomes the local id </sub>
+$ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
+```
+<sub> the init command clones the git repo to: "$HOME/.trbl/repos/oresoftware/tarballs"</sub>
+<sub> and "oresoftware/tarballs" becomes the id for that repo </sub>
 
 
-# <sub>set the given location as the repo to push files to </sub>
-$ trbl use oresoftware/tarballs
+<sub>set the given location as the repo to push files to </sub>
+```bash
+$ tarzan use oresoftware/tarballs
+```
 
+<sub> add a local file and push it to the remote repo </sub>
 
-# <sub> add a local file and push it to the remote repo </sub>
-$ trbl add foo.tgz "tgz/foo.latest.tgz"
-
+```bash
+$ tarzan add foo.tgz "tarballs/foo.tgz"
 ```
 
 ### Install a tarball from Github, with NPM, etc
@@ -26,14 +28,14 @@ $ trbl add foo.tgz "tgz/foo.latest.tgz"
 ```bash
 
 $ npm install --loglevel=warn -g \
- "https://raw.githubusercontent.com/<org>/<repo>/master/tarballs/r2g.tgz?$(date +%s)"
+ "https://raw.githubusercontent.com/<org>/<repo>/master/tarballs/foo.tgz?$(date +%s)"
 
 ```
 
-#### The above, a Dockerfile / Docker image:
+#### Using a Dockerfile / building a Docker image:
 
 ```bash
 RUN npm install --loglevel=warn -g \
- "https://raw.githubusercontent.com/<org>/<repo>/master/tarballs/r2g.tgz?$(date +%s)"
+ "https://raw.githubusercontent.com/<org>/<repo>/master/tarballs/foo.tgz?$(date +%s)"
 ```
 
