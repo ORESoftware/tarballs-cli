@@ -1,9 +1,7 @@
 
 #### Tarzan / tarballs-cli
 
-## commands:
-
-## Clone a git repo, to which you will push files (tarballs, etc).
+### Clone a git repo, to which you will push files (tarballs, etc).
 
 ```bash
 $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
@@ -12,7 +10,7 @@ $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
 <sup> <b> <i> and "oresoftware/tarballs" becomes the id for that repo </i> </b> </sup>
 
 
-## Use a repo to push files to
+### Use a repo to push files to
 
 ```bash
 $ tarzan use oresoftware/tarballs
@@ -25,7 +23,6 @@ $ tarzan add foo.tgz "tarballs/foo.tgz"
 ```
 
 
-
 ### Install a tarball from Github, with NPM, etc
 
 ```bash
@@ -35,7 +32,7 @@ $ npm install --loglevel=warn -g \
 
 ```
 
-#### Using a Dockerfile / building a Docker image:
+### Using a Dockerfile / building a Docker image:
 
 ```bash
 RUN npm install --loglevel=warn -g \
