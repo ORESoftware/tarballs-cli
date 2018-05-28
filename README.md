@@ -9,8 +9,8 @@
 $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
 ```
 >
-> <sup> <b> <i> the init command clones the git repo to: "$HOME/.trbl/repos/oresoftware/tarballs" </i> </b> </sup><br>
-> <sup> <b> <i> and "oresoftware/tarballs" becomes the id for that repo </i> </b> </sup>
+> <sup><b><i> the 'init' command clones the git repo to: "$HOME/.trbl/repos/oresoftware/tarballs" </i></b></sup><br>
+> <sup><b><i> and "oresoftware/tarballs" becomes the id for that repo </i></b></sup>
 >
 
 ### Use a repo to push files to
@@ -19,11 +19,19 @@ $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
 $ tarzan use oresoftware/tarballs
 ```
 
+>
+> <sup><b><i> the 'use' command sets a certain repo as the active one (globally/for all shells) </i></b></sup>
+>
+
 ### Add a local file and push it to the remote repo
 
 ```bash
 $ tarzan add foo.tgz "tarballs/foo.tgz"
 ```
+
+>
+> <sup><b><i> the 'add' writes a file to the active repo to the path and attempts to push the file to the remote.</i></b></sup>
+>
 
 ----------------------------------------------------
 
