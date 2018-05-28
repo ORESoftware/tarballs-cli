@@ -3,7 +3,7 @@
 
 #### commands:
 
-<sub> => clone a git repo, to which you will push files (tarballs, etc).</sub>
+<sub> <span style="color:blue"> => clone a git repo, to which you will push files (tarballs, etc). </span> </sub>
 
 ```bash
 $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
