@@ -18,7 +18,6 @@ $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
 ```bash
 $ tarzan use oresoftware/tarballs
 ```
-
 >
 > <sup><b><i> the 'use' command sets a certain repo as the active one (globally/for all shells) </i></b></sup>
 >
@@ -26,11 +25,10 @@ $ tarzan use oresoftware/tarballs
 ### Add a local file and push it to the remote repo
 
 ```bash
-$ tarzan add foo.tgz "tarballs/foo.tgz"
+$ tarzan add foo.tgz "x/y/z/foo.tgz"
 ```
-
 >
-> <sup><b><i> the 'add' writes a file to the active repo to the path and attempts to push the file to the remote.</i></b></sup>
+> <sup><b><i> the 'add' command writes a file to the active repo to the path and attempts to push the file to the remote.</i></b></sup>
 >
 
 ----------------------------------------------------
@@ -40,7 +38,7 @@ $ tarzan add foo.tgz "tarballs/foo.tgz"
 ```bash
 
 $ npm install --loglevel=warn -g \
- "https://raw.githubusercontent.com/<org>/<repo>/master/tarballs/foo.tgz?$(date +%s)"
+ "https://raw.githubusercontent.com/<org>/<repo>/master/x/y/z/foo.tgz?$(date +%s)"
 
 ```
 
@@ -48,6 +46,6 @@ $ npm install --loglevel=warn -g \
 
 ```bash
 RUN npm install --loglevel=warn -g \
- "https://raw.githubusercontent.com/<org>/<repo>/master/tarballs/foo.tgz?$(date +%s)"
+ "https://raw.githubusercontent.com/<org>/<repo>/master/x/y/z/foo.tgz?$(date +%s)"
 ```
 
