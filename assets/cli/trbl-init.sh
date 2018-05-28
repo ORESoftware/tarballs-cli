@@ -14,17 +14,15 @@ if [ -z "$name" ]; then
 fi
 
 
-
 if [ -z "$repo" ]; then
    echo "You need to include a git repo as the second argument.";
    exit 1;
 fi
 
 
-
 (
   cd "$HOME/.trbl/repos"
-  ( git clone "$repo" "$name" > /dev/null)
+  git clone "$repo" "$name";
   trbl use "$name";
   echo "$PWD/$name";
 )

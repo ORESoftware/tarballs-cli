@@ -17,12 +17,12 @@ if [ -z "$current_repo" ]; then
 fi
 
 
-
 if [ -z "$file" ]; then
    echo "no file passed -> please pass a file as the first argument." >&2;
    echo "no file name -> please pass a file name as the second argument." >&2;
    exit 1;
 fi
+
 
 if [[ "$file" != /* ]]; then
     file="$PWD/$file"
@@ -52,4 +52,5 @@ fi
   git add "$file_name"
   git commit -m "added $file_name";
   git push -u origin master;
+
 )
