@@ -1,9 +1,9 @@
 
-### Tarzan / tarballs-cli
+#### Tarzan / tarballs-cli
 
-#### commands:
+## commands:
 
-<sub> <b> <i> => clone a git repo, to which you will push files (tarballs, etc). </i> </b> </sub>
+## Clone a git repo, to which you will push files (tarballs, etc).
 
 ```bash
 $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
@@ -12,17 +12,19 @@ $ tarzan init oresoftware/tarballs "git@github.com:ORESoftware/tarballs.git"
 <sup> <b> <i> and "oresoftware/tarballs" becomes the id for that repo </i> </b> </sup>
 
 
-<sub> <b> <i> => set the given location as the repo to push files to </i> </b> </sub>
+## Use a repo to push files to
 
 ```bash
 $ tarzan use oresoftware/tarballs
 ```
 
-<sub> <b> <i> => add a local file and push it to the remote repo </i> </b> </sub>
+### Add a local file and push it to the remote repo
 
 ```bash
 $ tarzan add foo.tgz "tarballs/foo.tgz"
 ```
+
+
 
 ### Install a tarball from Github, with NPM, etc
 
