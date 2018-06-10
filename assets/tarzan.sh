@@ -12,7 +12,7 @@ tarzan(){
 }
 
 
-trbl (){
+trbl(){
 
    if [[ -z "$(command -v trbl)" ]]; then
        npm install -g "tarballs-cli" || {
