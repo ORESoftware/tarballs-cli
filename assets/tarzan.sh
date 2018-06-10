@@ -2,7 +2,7 @@
 
 
 tarzan(){
-   if [[ -z "`command -v tarzan`" ]]; then
+   if [[ -z "$(command -v tarzan)" ]]; then
        npm install -g "tarballs-cli" || {
           return 1;
       }
@@ -14,14 +14,13 @@ tarzan(){
 
 trbl (){
 
-   if [[ -z "`command -v trbl`" ]]; then
+   if [[ -z "$(command -v trbl)" ]]; then
        npm install -g "tarballs-cli" || {
           return 1;
       }
    fi
 
    command trbl "$@"
-
 }
 
 
