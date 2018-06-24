@@ -15,9 +15,11 @@ mkdir -p "$HOME/.oresoftware/bash" || {
     exit 1;
 }
 
-cat "assets/tarzan.sh" > "$HOME/.oresoftware/bash/tarzan.sh";
+cat "assets/shell.sh" > "$HOME/.oresoftware/bash/tarzan.sh" || {
+  echo "could not create oresoftware/bash/tarzan.sh file."
+  exit 1;
+}
 
-echo -e "${r2g_green}trbl/tarzan was installed successfully.${r2g_no_color}";
+echo; echo -e "${r2g_green} => trbl/tarzan was installed successfully.${r2g_no_color}";
 echo -e "Add the following line to your .bashrc/.bash_profile files:";
-echo -e "${r2g_cyan} . \"\$HOME/.oresoftware/shell.sh\"${r2g_no_color}";
-echo " ";
+echo -e "${r2g_cyan} . \"\$HOME/.oresoftware/shell.sh\"${r2g_no_color}"; echo;

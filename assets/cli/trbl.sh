@@ -6,35 +6,35 @@ shift 1;
 
 if [ "$cmd" == "add" ]; then
 
-  trbl_add "$@"
+  trbl_add $@
 
 elif [ "$cmd" == "init" ]; then
 
-  trbl_init "$@"
+  trbl_init  $@
 
 elif [ "$cmd" == "remove-all" ]; then
 
-  trbl_remove_all "$@"
+  trbl_remove_all  $@
 
 elif [ "$cmd" == "remove" ]; then
 
-  trbl_remove "$@"
+  trbl_remove  $@
 
 elif [ "$cmd" == "use" ]; then
 
-  trbl_use "$@"
+  trbl_use  $@
 
 elif [ "$cmd" == "get" ]; then
 
-  trbl_get "$@"
+  trbl_get  $@
 
 elif [ "$cmd" == "view" ]; then
 
-  trbl_view "$@"
+  trbl_view  $@
 
 else
 
-  echo "no subcommand was recognized."
+  echo "no subcommand was recognized, instead try (tarzan use, tarzan remove, tarzan get, tarzan view, etc)."
   exit 1;
 
 fi
