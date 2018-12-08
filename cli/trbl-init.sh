@@ -23,6 +23,7 @@ fi
 (
   cd "$HOME/.trbl/repos"
   git clone "$repo" "$name";
+  git checkout 'master' || git checkout -b master 'origin/master' || git checkout -b 'master';
   trbl use "$name";
   echo "$PWD/$name";
 )

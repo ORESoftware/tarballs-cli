@@ -17,7 +17,7 @@ trbl(){
       }
    fi
 
-   command trbl $@;
+   command trbl "$@";
 }
 
 

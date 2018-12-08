@@ -7,6 +7,12 @@ mkdir -p "$HOME/.trbl/conf";
 
 current_repo=`cat "$HOME/.trbl/conf/current_repo.json"`;
 
+push="yes"
+
+if [[ "$trbl_push" == "nope" ]]; then
+  push="nope"
+fi
+
 file="$1";
 file_name="$2";
 
@@ -45,12 +51,18 @@ fi
      exit 1;
   }
 
-  git fetch origin;
-  git reset --hard "origin/master";
+  if [[ "$push" == "yes" ]]; then
+      git fetch origin;
+      git reset --hard "origin/master";
+  fi
+
   mkdir -p "$(dirname "$file_name")"
   cat "$file" > "$file_name"
   git add "$file_name"
-  git commit -m "added $file_name";
-  git push -u origin master;
+
+  if [[ "$push" == "yes" ]]; then
+      git commit -m "added $file_name";
+      git push -u origin master;
+  fi
 
 )
