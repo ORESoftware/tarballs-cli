@@ -1,7 +1,8 @@
 {
   "name": "tarballs-cli",
   "version": "0.0.103",
-  "description": "Semver-oriented TypeScript library skeleton.",
+  "private": true,
+  "description": "Legacy tarzan/trbl CLI frozen pending the migration decision in issue #1.",
   "main": "dist/index.js",
   "bin": {
     "tarzan": "cli/trbl.sh",
@@ -11,7 +12,7 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "test": "suman test",
-    "postinstall": "./assets/postinstall.sh"
+    "prepublishOnly": "node ./scripts/block-legacy-publish.js"
   },
   "repository": {
     "type": "git",
