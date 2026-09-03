@@ -1,0 +1,86 @@
+[help]
+url = "https://github.com/ORESoftware/tarballs-cli/issues/1"
+columns = ["options", "env", "type", "default", "description"]
+
+[parse]
+command_env = "TRBL_COMMAND"
+positionals_env = "TRBL_POSITIONALS"
+unknown_options_env = "TRBL_UNKNOWN_OPTIONS"
+errors_env = "TRBL_PARSE_ERRORS"
+allow_unknown = false
+
+# This manifest is the intended migration contract. The legacy shell dispatcher
+# does not yet consume it; issue #1 remains open until flags-2-env is the single
+# argv parser and the command-specific positional schemas are enforced.
+
+[flags.help]
+env = "TRBL_HELP"
+aliases = ["help"]
+short = "h"
+type = "bool"
+default = false
+help = "Print generated help and exit without performing repository effects."
+
+[flags.version]
+env = "TRBL_VERSION_REQUESTED"
+aliases = ["version"]
+type = "bool"
+default = false
+help = "Print the CLI version and exit."
+
+[flags.dry_run]
+env = "TRBL_DRY_RUN"
+aliases = ["dry-run", "plan"]
+type = "bool"
+default = true
+help = "Plan the command without changing files, Git repositories, or remotes."
+
+[flags.json]
+env = "TRBL_JSON"
+aliases = ["json"]
+type = "bool"
+default = false
+help = "Emit bounded machine-readable diagnostics without credentials or file contents."
+
+[flags.repository_root]
+env = "TRBL_REPOSITORY_ROOT"
+aliases = ["repository-root", "repo-root"]
+type = "string"
+help = "Explicit local repository-store root; it must pass ownership, symlink, and traversal checks."
+
+[flags.lock_timeout_ms]
+env = "TRBL_LOCK_TIMEOUT_MS"
+aliases = ["lock-timeout-ms"]
+type = "integer"
+default = 10000
+help = "Maximum time to wait for a local repository lock before failing closed."
+
+[commands.init]
+help = "Register and clone one approved remote into the managed local repository store."
+
+[commands.use]
+help = "Select an already registered repository without mutating a shell profile."
+
+[commands.add]
+help = "Plan or copy one local artifact into an approved relative destination."
+
+[commands.get]
+help = "Resolve one registered artifact without evaluating remote content."
+
+[commands.view]
+help = "Show bounded metadata for the active repository and tracked artifacts."
+
+[commands.fetch]
+help = "Fetch immutable remote metadata for one registered repository."
+
+[commands.push]
+help = "Push reviewed local commits to an explicitly configured remote without force."
+
+[commands.repair]
+help = "Validate and repair local metadata without deleting repositories or rewriting history."
+
+[commands.remove]
+help = "Remove one registration after a plan and confirmation; remote state is unchanged."
+
+[commands.remove-all]
+help = "Plan removal of all local registrations; remote repositories and refs are unchanged."
